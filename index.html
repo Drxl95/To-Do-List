@@ -9,19 +9,21 @@
 </head>
 
 <body>
-	<div class="container">
-		<p><span id="date-time"></span></p>
+
+<div class="container">
+		<p class="date-position"><span id="date-time"></span></p>
 		<h2>To Do List</h2>
-		<p><em> Double click to mark an item off, click on "X" to delete an item, and drag items to reorder.</em></p>
-       
-		<form name="toDoList">
-			<input type="text" name="ListItem" id="input"/>
-		</form>
+		<p class="text"><em> Double click to mark an item off, click on "X" to delete an item, and drag items to reorder.</em></p>
     
+	<form class="form-container" name="toDoList">
+		<input type="text" name="ListItem" id="input" />
 		<div onclick="newItem()" id="button">Add</div>
 		<br/>
 		<ol id="list"></ol>
-  </div>
+	</form>
+</div>
+
+	
   <script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

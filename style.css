@@ -8,34 +8,39 @@ background: #dfdfdf;
 
 .container{
 padding: 40px;
-width: 600px;
 margin: 0 auto;
 margin-top: 40px;
 background: white;
 border-radius: 5px;
-}
-.date-input {
-	width: auto;
-	border: none;
+text-align: center;
+width: 50%;
 }
 
-.container h2 {
-	text-align: center;
-}
-form {
-display: inline-block;
+.date-position {
+	text-align: left;
 }
 
-input{
-width: 182%;
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+margin-top: 2rem;
+margin-bottom: .5rem;
+max-width: 500px;
+width: 100%;
 height: 30px;
 padding: 4px 15px 4px 5px;
 font-size: 1.5rem;
-
+border: 1.5px solid black;
 }
 
 #button{
-
+	width: 100%;
+max-width: 500px;
 background-color:#99b3fc;
 color:#ffffff;
 border-radius: 5px;
@@ -48,7 +53,12 @@ padding: 7px 15px;
 cursor: pointer;
 opacity: .8;}
 
-ol {padding-left: 20px;}
+ol {
+	padding-left: 20px;
+	max-width: 500px;
+	width: 100%;
+
+}
 
 ol li {padding: 5px;color:#000;}
 
@@ -70,4 +80,39 @@ li > crossOutButton {
 	float: right;
 	color: red;
 	font-weight: 800;
+}
+
+@media screen and (max-width:1024px) {
+	.container {
+		width: 75%;
+	}
+	input {
+		margin-bottom: 2rem;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	h2 {
+		font-size: 2.25rem;
+	}
+	.text {
+		font-size: 1.5rem;
+	}
+	input {
+		margin-bottom: .75rem;
+	}
+	
+}
+
+@media screen and (max-width: 650px) {
+	h2 {
+		font-size: 2rem;
+	}
+	.text {
+		font-size: 1.25rem;
+	}
+	input {
+		margin-bottom: .75rem;
+	}
+	
 }
