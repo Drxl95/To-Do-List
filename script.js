@@ -1,4 +1,10 @@
 
+let today = new Date();
+
+let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+
+document.getElementById('date-time').innerHTML = date;
+
 function newItem() {
     let li = $('<li></li>');
     $('#list').append(li);
@@ -38,6 +44,10 @@ function newItem() {
     $('#list').sortable();
 
 };
+
+
+
+
 
 
 
