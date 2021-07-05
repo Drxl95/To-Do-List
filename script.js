@@ -1,55 +1,41 @@
-
 let today = new Date();
+let date = today.getMonth() + 1 + "-" + today.getDate() + "-" + today.getFullYear();
 
-// let date = today.getDate()+'-'(today.getMonth()+1)+'-'+today.getFullYear();
-let date =(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
-
-document.getElementById('date-time').innerHTML = date;
+document.getElementById("date-time").innerHTML = date;
 
 function newItem() {
-    let li = $('<li></li>');
-    $('#list').append(li);
+  let li = $("<li></li>");
+  $("#list").append(li);
 
-    let inputValue = $('input').val();
+  let inputValue = $("input").val();
 
-    let text = $(document.createTextNode(inputValue));
-    li.append(text);
+  let text = $(document.createTextNode(inputValue));
+  li.append(text);
 
-    if(inputValue === "") {
-        alert('You must write something!');
-    }else {
-        let list = $('#list');
-        list.append(li);
-    }
+  if (inputValue === "") {
+    alert("You must write something!");
+  } else {
+    let list = $("#list");
+    list.append(li);
+  }
 
-    function crossOut() {
-        li.toggleClass("strike");
-    }
+  function crossOut() {
+    li.toggleClass("strike");
+  }
 
-    li.on('dblclick', crossOut);
-    
-    
-    let crossOutButton = $('<crossoutButton></crossoutButton>');
-    li.append(crossOutButton);
+  li.on("dblclick", crossOut);
 
-    crossOutButton.append(document.createTextNode('X'));  
-    li.append(crossOutButton);
+  let crossOutButton = $("<crossoutButton></crossoutButton>");
+  li.append(crossOutButton);
 
-    function deleteListItem() {
-        li.addClass('delete')
-    }
+  crossOutButton.append(document.createTextNode("X"));
+  li.append(crossOutButton);
 
-    crossOutButton.on('click',  deleteListItem );
+  function deleteListItem() {
+    li.addClass("delete");
+  }
 
+  crossOutButton.on("click", deleteListItem);
 
-    $('#list').sortable();
-
-};
-
-
-
-
-
-
-
-
+  $("#list").sortable();
+}
